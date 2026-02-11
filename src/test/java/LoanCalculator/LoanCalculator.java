@@ -19,7 +19,7 @@ public class LoanCalculator extends BaseTest {
     }
 
     @Test
-    public void navigateToLoanPage(){
+    public void consumerLoan(){
         homePageSteps.navigateToLoanPage();
         consumerLoanPageSteps
                 .navigateToConsumerLoanPage()
