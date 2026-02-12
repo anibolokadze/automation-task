@@ -15,7 +15,7 @@ public class MoneyTransferPage {
         this.remittanceFeeAmount = page.locator("tbcx-text-input input[type='text']");
         remittanceFeeAmountCurrency = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions()
                         .setName("GEL"));
-        remittanceFeeCurrencyEUR = page.locator("tbcx-dropdown-popover-item")
+        remittanceFeeCurrencyEUR = page.locator(".tbcx-dropdown-popover-item")
                 .filter(new Locator.FilterOptions().setHasText("EUR"));
         remittanceFeeCountry = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Choose a country"));
         remittanceFeeGreece = page.locator("tbcx-dropdown-popover-item").filter(new Locator.FilterOptions().setHasText("Greece"));

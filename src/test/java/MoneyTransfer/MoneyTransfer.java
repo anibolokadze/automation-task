@@ -16,7 +16,7 @@ public class MoneyTransfer extends BaseTest {
         moneyTransferSteps = new MoneyTransferSteps(getPage());
     }
 
-    @Test
+    @Test(priority = 1)
     public void moneyTransfer(){
         moneyTransferSteps.selectRemittanceFee()
                 .fillRemittanceFeeAmount(REMITTANCE_FEE_AMOUNT)
@@ -26,4 +26,15 @@ public class MoneyTransfer extends BaseTest {
                 .verifyCalculationResultValue()
         ;
     }
+
+//    @Test
+//    public void moneyTransfer(){
+//        moneyTransferSteps.selectRemittanceFee()
+//                .fillRemittanceFeeAmount(REMITTANCE_FEE_AMOUNT)
+//                .selectRemittanceFeeAmountCurrency()
+//                .selectRemittanceFeeCountry()
+//                .verifyCalculationResult()
+//                .verifyCalculationResultValue()
+//        ;
+//    }
 }

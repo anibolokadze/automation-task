@@ -16,13 +16,29 @@ public class LoanCalculator extends BaseTest {
         consumerLoanPageSteps = new ConsumerLoanPageSteps(getPage());
     }
 
-    @Test
-    public void consumerLoan(){
+    @Test(priority = 1)
+    public void verifyPage(){
         consumerLoanPageSteps
-                .navigateToConsumerLoanPage()
-                .fillLoanAmount(String.valueOf(LOAN_AMOUNT_1))
-                .fillLoanDuration(String.valueOf(LOAN_DURATION_1))
-                .verifyCalculatedAmounts()
+                .navigateToConsumerLoanPage();
+    }
+    @Test(priority = 2)
+    public void fillLoanAmount(){
+        consumerLoanPageSteps
+                .fillLoanAmount(String.valueOf(LOAN_AMOUNT_1));
+    }
+    @Test(priority = 3)
+    public void fillLoanDuration(){
+        consumerLoanPageSteps
+                .fillLoanDuration(String.valueOf(LOAN_DURATION_1));
+    }
+    @Test(priority = 4)
+    public void verifyCalculatedAmounts(){
+        consumerLoanPageSteps
+                .verifyCalculatedAmounts();
+    }
+    @Test (priority = 5)
+    public void updateAmountAndVerify(){
+        consumerLoanPageSteps
                 .updateLoanAmount(String.valueOf(LOAN_AMOUNT_2))
                 .verifyUpdatedCalculatedAmounts();
     }
