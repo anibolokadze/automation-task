@@ -1,7 +1,6 @@
 package baseTests;
 
 import com.microsoft.playwright.*;
-import org.tbc.data.Constants;
 import org.testng.annotations.BeforeClass;
 
 import java.util.List;
