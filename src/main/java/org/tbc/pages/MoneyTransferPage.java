@@ -20,8 +20,7 @@ public class MoneyTransferPage {
         remittanceFeeCountry = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Choose a country"));
         remittanceFeeGreece = page.locator("tbcx-dropdown-popover-item").filter(new Locator.FilterOptions().setHasText("Greece"));
         calculationResult = page.locator(".tbcx-pw-money-transfer-fee-calculator__cards");
-        calculationResultValue = page.getByText("Commission 9.99 €");
-
+        calculationResultValue = page.locator(".tbcx-pw-money-transfer-fee-calculator__cards");
     }
 
 

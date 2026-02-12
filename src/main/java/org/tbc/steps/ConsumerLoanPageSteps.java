@@ -1,6 +1,5 @@
 package org.tbc.steps;
 
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import org.tbc.data.Constants;
 import org.tbc.pages.ConsumerLoanPage;
@@ -17,7 +16,6 @@ public class ConsumerLoanPageSteps extends ConsumerLoanPage {
     }
 
     public ConsumerLoanPageSteps navigateToConsumerLoanPage(){
-        consumerLoanConditionsButton.click();
         page.waitForURL(Constants.CONSUMER_LOAN_URL);
         assertThat(loanLabel).isVisible();
         return this;

@@ -1,7 +1,6 @@
 package baseTests;
 
 import com.microsoft.playwright.*;
-import org.tbc.data.Constants;
 import org.testng.annotations.BeforeClass;
 
 import java.util.List;
@@ -24,7 +23,9 @@ public class BaseTest {
                 new Browser.NewContextOptions().setViewportSize(null)
         );
         page = context.newPage();
-        page.navigate(Constants.BASE_URL);
+    }
+    protected void navigateTo(String url) {
+        page.navigate(url);
     }
 
     protected Page getPage(){return page;}
