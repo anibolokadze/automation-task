@@ -17,13 +17,4 @@ public class HomePageSteps extends HomePage {
         consumerLoanNavButton.click();
         return this;
     }
-    public HomePageSteps changeLanguageToENG(){
-        languageSwitcherGEO.click();
-        return this;
-    }
-    public HomePageSteps navigateToMoneyTransfersPage(){
-        personalNavItemENG.click();
-        MoneyTransferNavButton.click();
-        return this;
-    }
 }

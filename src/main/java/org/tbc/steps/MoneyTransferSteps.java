@@ -34,7 +34,6 @@ public class MoneyTransferSteps extends MoneyTransferPage {
     public MoneyTransferSteps verifyCalculationResult(){
         calculationResult.scrollIntoViewIfNeeded();
         assertThat(calculationResult).isVisible();
-        //
         return this;
     }
     public MoneyTransferSteps verifyCalculationResultValue(){

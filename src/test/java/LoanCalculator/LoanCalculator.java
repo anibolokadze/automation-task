@@ -14,6 +14,7 @@ public class LoanCalculator extends BaseTest {
 
     @BeforeClass
     public  void setUpSteps(){
+        navigateTo(BASE_URL);
         homePageSteps = new HomePageSteps(getPage());
         consumerLoanPageSteps = new ConsumerLoanPageSteps(getPage());
     }

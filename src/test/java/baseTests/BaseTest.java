@@ -24,7 +24,9 @@ public class BaseTest {
                 new Browser.NewContextOptions().setViewportSize(null)
         );
         page = context.newPage();
-        page.navigate(Constants.BASE_URL);
+    }
+    protected void navigateTo(String url) {
+        page.navigate(url);
     }
 
     protected Page getPage(){return page;}
