@@ -16,14 +16,39 @@ public class MoneyTransfer extends BaseTest {
         moneyTransferSteps = new MoneyTransferSteps(getPage());
     }
 
-    @Test
-    public void moneyTransfer(){
-        moneyTransferSteps.selectRemittanceFee()
-                .fillRemittanceFeeAmount(REMITTANCE_FEE_AMOUNT)
-                .selectRemittanceFeeAmountCurrency()
-                .selectRemittanceFeeCountry()
-                .verifyCalculationResult()
-                .verifyCalculationResultValue()
-        ;
+    @Test(priority = 1)
+    public void verifyLoad(){
+        moneyTransferSteps
+                .verifyLoad();
+    }
+    @Test(priority = 2)
+    public void selectRemittanceFee(){
+        moneyTransferSteps
+                .selectRemittanceFee();
+    }
+    @Test(priority = 3)
+    public void fillRemittanceFeeAmount(){
+        moneyTransferSteps
+                .fillRemittanceFeeAmount(REMITTANCE_FEE_AMOUNT);
+    }
+    @Test(priority = 4)
+    public void selectRemittanceFeeAmountCurrency(){
+        moneyTransferSteps
+                .selectRemittanceFeeAmountCurrency();
+    }
+    @Test(priority = 5)
+    public void selectRemittanceFeeCountry(){
+        moneyTransferSteps
+                .selectRemittanceFeeCountry();
+    }
+    @Test(priority = 6)
+    public void verifyCalculationResult(){
+        moneyTransferSteps
+                .verifyCalculationResult();
+    }
+    @Test(priority = 7)
+    public void verifyCalculationResultValue(){
+        moneyTransferSteps
+                .verifyCalculationResultValue();
     }
 }

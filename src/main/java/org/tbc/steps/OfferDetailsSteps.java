@@ -24,7 +24,7 @@ public class OfferDetailsSteps extends OfferDetailsPage {
         assertThat(discountBadge).isVisible();
         return this;
     }
-    public OfferDetailsSteps verifyOfferDiscription(){
+    public OfferDetailsSteps verifyOfferDescription(){
         assertThat(offerDiscription).isVisible();
         return this;
     }

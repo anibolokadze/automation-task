@@ -13,6 +13,10 @@ public class MoneyTransferSteps extends MoneyTransferPage {
         super(page);
         this.page = page;
     }
+    public MoneyTransferSteps verifyLoad(){
+        page.waitForURL(Constants.MONEY_TRANSFERS_URL);
+        return this;
+    }
     public MoneyTransferSteps selectRemittanceFee(){
         remittanceFeeButton.click();
         return this;

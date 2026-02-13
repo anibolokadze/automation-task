@@ -15,13 +15,24 @@ public class OfferDetails extends BaseTest {
         navigateTo(OFFER_DETAILS_URL);
         offerDetailsSteps = new OfferDetailsSteps(getPage());
     }
-    @Test
-    public void verifyLoad(){
+    @Test(priority = 1)
+    public void verifyTitle(){
         offerDetailsSteps
-                .verifyTitle()
-                .verifyHero()
-                .verifyDiscountBadge()
-                .verifyOfferDiscription();
+                .verifyTitle();
     }
-
+    @Test(priority = 2)
+    public void verifyHero(){
+        offerDetailsSteps
+                .verifyHero();
+    }
+    @Test(priority = 3)
+    public void verifyDiscountBadge(){
+        offerDetailsSteps
+                .verifyDiscountBadge();
+    }
+    @Test(priority = 4)
+    public void verifyOfferDescription(){
+        offerDetailsSteps
+                .verifyOfferDescription();
+    }
 }
