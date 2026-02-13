@@ -1,6 +1,6 @@
 package OfferDetails;
 
-import baseTests.BaseTest;
+import BaseTests.BaseTest;
 import org.tbc.steps.OfferDetailsSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
