@@ -1,6 +1,6 @@
 package LoanCalculator;
 
-import baseTests.BaseTest;
+import BaseTests.BaseTest;
 import org.tbc.steps.ConsumerLoanPageSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
