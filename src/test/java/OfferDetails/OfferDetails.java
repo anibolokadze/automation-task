@@ -35,5 +35,4 @@ public class OfferDetails extends BaseTest {
         offerDetailsSteps
                 .verifyOfferDescription();
     }
-
 }
