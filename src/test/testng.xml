@@ -2,9 +2,7 @@
 <suite name="Playwright Test Suite" parallel="false">
     <test name="Regression">
         <classes>
-            <class name="LoanCalculator.LoanCalculator"></class>
-            <class name="MoneyTransfer.MoneyTransfer"></class>
-            <class name="OfferDetails.OfferDetails"></class>
+            <class name="OffersList.OffersList"></class>
         </classes>
     </test>
 </suite>

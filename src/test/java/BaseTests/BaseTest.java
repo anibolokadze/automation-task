@@ -10,18 +10,21 @@ public class BaseTest {
     protected Browser browser;
     protected BrowserContext context;
     protected Page page;
+    protected boolean headless;
 
     @BeforeClass
     public void setUp(){
+        headless = false;
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
                 new BrowserType.LaunchOptions()
-                        .setHeadless(true)
+                        .setHeadless(headless)
                         .setArgs(List.of("--start-maximized"))
         );
         context = browser.newContext(
                 new Browser.NewContextOptions().setViewportSize(null)
         );
+
         page = context.newPage();
     }
     protected void navigateTo(String url) {
@@ -29,4 +32,7 @@ public class BaseTest {
     }
 
     protected Page getPage(){return page;}
+    protected boolean isHeadless() {
+        return headless;
+    }
 }
