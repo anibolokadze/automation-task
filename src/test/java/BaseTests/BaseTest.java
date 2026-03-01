@@ -14,7 +14,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp(){
-        headless = false;
+        headless = true;
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
                 new BrowserType.LaunchOptions()

@@ -9,5 +9,6 @@ public class Constants {
     public static final int LOAN_DURATION_1 = 48;
     public static final int LOAN_AMOUNT_2 = 5000;
     public static final int REMITTANCE_FEE_AMOUNT = 1000;
+    public static final String TBC_CREDIT_URL_TITLE = "TBC Credit – ციფრული სამომხმარებლო სესხი";
 
 }
