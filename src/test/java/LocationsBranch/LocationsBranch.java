@@ -13,7 +13,7 @@ public class LocationsBranch extends MobileBaseTest {
     @BeforeClass
     public  void setUpSteps(){
         navigateTo(HOME_URL);
-        locationsBranchSteps = new LocationsBranchSteps(getPage(), isHeadless());
+        locationsBranchSteps = new LocationsBranchSteps(getPage());
     }
     @Test (priority = 1)
     public void clickLocations(){

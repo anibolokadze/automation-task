@@ -3,10 +3,6 @@ package BaseTests;
 import com.microsoft.playwright.*;
 import org.testng.annotations.BeforeClass;
 
-import java.util.Arrays;
-import java.util.List;
-
-
 public class MobileBaseTest {
     protected Playwright playwright;
     protected Browser browser;

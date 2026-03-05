@@ -9,12 +9,10 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 
 public class LocationsBranchSteps extends LocationsBranchPage {
     private final Page page;
-    private final boolean headless;
     private final HomePage homePage;
-    public LocationsBranchSteps(Page page, boolean headless){
+    public LocationsBranchSteps(Page page){
         super(page);
         this.page = page;
-        this.headless = headless;
         this.homePage = new HomePage(page);
     }
     public LocationsBranchSteps clickLocations(){
