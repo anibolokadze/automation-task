@@ -17,14 +17,14 @@ public class OffersListPage {
                 .filter(new Locator.FilterOptions().setHasText("შოპინგი"))
                 .locator("input[type='checkbox']");
 
-        this.cardCategoryDesktop = page
-                .locator("app-marketing-main app-marketing-filter-item")
-                .filter(new Locator.FilterOptions().setHasText("მასტერქარდი"))
-                .locator("input[type='checkbox']");
-
         this.shoppingCategoryModal = page
                 .locator("#cdk-dialog-serverApp0 app-marketing-filter-item")
                 .filter(new Locator.FilterOptions().setHasText("შოპინგი"))
+                .locator("input[type='checkbox']");
+
+        this.cardCategoryDesktop = page
+                .locator("app-marketing-main app-marketing-filter-item")
+                .filter(new Locator.FilterOptions().setHasText("მასტერქარდი"))
                 .locator("input[type='checkbox']");
 
         this.cardCategoryModal = page

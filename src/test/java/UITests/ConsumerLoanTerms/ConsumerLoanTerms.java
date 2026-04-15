@@ -1,13 +1,11 @@
-package ConsumerLoanTerms;
+package UITests.ConsumerLoanTerms;
 
 import BaseTests.BaseTest;
-import org.tbc.steps.ConsumerLoanTermsSteps;
-import org.tbc.steps.OfferDetailsSteps;
+import org.tbc.steps.ui.ConsumerLoanTermsSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static org.tbc.data.Constants.CONSUMER_LOAN_URL;
-import static org.tbc.data.Constants.OFFER_DETAILS_URL;
 
 public class ConsumerLoanTerms extends BaseTest {
     private ConsumerLoanTermsSteps consumerLoanTermsSteps;

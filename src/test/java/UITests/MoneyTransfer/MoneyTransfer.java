@@ -1,7 +1,7 @@
-package MoneyTransfer;
+package UITests.MoneyTransfer;
 
 import BaseTests.BaseTest;
-import org.tbc.steps.MoneyTransferSteps;
+import org.tbc.steps.ui.MoneyTransferSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
