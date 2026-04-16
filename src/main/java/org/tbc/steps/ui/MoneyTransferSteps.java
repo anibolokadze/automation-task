@@ -12,6 +12,7 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 public class MoneyTransferSteps extends MoneyTransferPage {
     private final Page page;
     private List<String> UINames;
+    private List<String> UICurrencies;
 
     public MoneyTransferSteps(Page page){
         super(page);
@@ -55,13 +56,18 @@ public class MoneyTransferSteps extends MoneyTransferPage {
     }
 
     public MoneyTransferSteps getSystemsTabs(){
-        transferSystemsItems.first().waitFor();
-        UINames = transferSystemsItems.allInnerTexts();
+        transferSystemsNamesItems.first().waitFor();
+        UINames = transferSystemsNamesItems.allInnerTexts();
+        UICurrencies = transferSystemsCurrenciesItems.allInnerTexts();
         return this;
     }
 
     public MoneyTransferSteps assertMenuNamesMatch(List<String> APINames){
         Assert.assertEquals(UINames, APINames);
+        return this;
+    }
+    public MoneyTransferSteps assertCurrenciesMatch(List<String> APINames){
+        Assert.assertEquals(UICurrencies, APINames);
         return this;
     }
 }

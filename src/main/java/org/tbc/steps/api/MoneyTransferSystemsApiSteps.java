@@ -8,39 +8,47 @@ import org.tbc.models.TransferSystems;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.emptyOrNullString;
 
-public class MoneyTransfersSystemsNamesSteps {
+public class MoneyTransferSystemsApiSteps {
     private Response response;
     private List<TransferSystems> transferSystems;
-    public MoneyTransfersSystemsNamesSteps getTransferSystems(){
+    public MoneyTransferSystemsApiSteps getTransferSystems(){
         response = RestAssured.given()
                 .baseUri(Constants.BASE_URL)
                 .accept(ContentType.JSON)
                 .when()
-                .get("/api/v1/moneyTransfer/systems?locale=ka-GE");
+                .get(Constants.PATH_MONEY_TRANSFERS);
         return this;
     }
 
-    public MoneyTransfersSystemsNamesSteps deserializeTransferSystems(){
+    public MoneyTransferSystemsApiSteps deserializeTransferSystems(){
         this.transferSystems = Arrays.asList(response.as(TransferSystems[].class));
         return this;
     }
 
     public List<String> getTransferSystemsNames(){
-        return transferSystems.stream()
+        List<String> names = transferSystems.stream()
                 .map(TransferSystems::getName)
-                .collect(Collectors.toList());
+                .toList();
+        return names;
     }
 
-    public MoneyTransfersSystemsNamesSteps assertField(){
+    public List<String> getTransferSystemsCurrencies(){
+        List<String> currencies = transferSystems.stream()
+                .map(t -> "currency - " + String.join("/", t.getCurrencies()))
+                .toList();
+        return currencies;
+    }
+
+    public MoneyTransferSystemsApiSteps assertField(){
         response.then()
                 .assertThat()
                 .statusCode(200)
                 .body("name", everyItem(not(emptyOrNullString())));
         return this;
     }
+
 }

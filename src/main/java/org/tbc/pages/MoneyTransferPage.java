@@ -9,7 +9,7 @@ import org.tbc.steps.ui.MoneyTransferSteps;
 public class MoneyTransferPage {
     public Locator remittanceFeeButton, remittanceFeeAmount,
             remittanceFeeAmountCurrency, remittanceFeeCurrencyEUR, remittanceFeeCountry, remittanceFeeGreece, calculationResult,
-            calculationResultValue, transferSystemsItems;
+            calculationResultValue, transferSystemsNamesItems, transferSystemsCurrenciesItems;
     public MoneyTransferPage(Page page){
         this.remittanceFeeButton = page.getByRole(AriaRole.BUTTON,
                 new Page.GetByRoleOptions()
@@ -23,6 +23,7 @@ public class MoneyTransferPage {
         remittanceFeeGreece = page.locator("tbcx-dropdown-popover-item").filter(new Locator.FilterOptions().setHasText("Greece"));
         calculationResult = page.locator(".tbcx-pw-money-transfer-fee-calculator__cards");
         calculationResultValue = page.locator(".tbcx-pw-money-transfer-fee-calculator__cards");
-        this.transferSystemsItems = page.locator("div.tbcx-pw-card__logo-and-text-info");
+        this.transferSystemsNamesItems = page.locator("div.tbcx-pw-card__logo-and-text-info");
+        this.transferSystemsCurrenciesItems = page.locator("span.tbcx-pw-card__caption");
     }
 }
