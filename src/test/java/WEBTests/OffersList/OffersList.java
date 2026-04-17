@@ -1,7 +1,7 @@
-package UITests.OffersList;
+package WEBTests.OffersList;
 
 import BaseTests.BaseTest;
-import org.tbc.steps.ui.OfferListSteps;
+import org.tbc.steps.web.OfferListSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import static org.tbc.data.Constants.OFFER_LIST_URL;

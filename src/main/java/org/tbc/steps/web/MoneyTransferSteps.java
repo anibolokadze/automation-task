@@ -1,4 +1,4 @@
-package org.tbc.steps.ui;
+package org.tbc.steps.web;
 
 import com.microsoft.playwright.Page;
 import org.tbc.data.Constants;

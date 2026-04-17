@@ -1,7 +1,7 @@
-package UITests.ConsumerLoanTerms;
+package WEBTests.ConsumerLoanTerms;
 
 import BaseTests.BaseTest;
-import org.tbc.steps.ui.ConsumerLoanTermsSteps;
+import org.tbc.steps.web.ConsumerLoanTermsSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
