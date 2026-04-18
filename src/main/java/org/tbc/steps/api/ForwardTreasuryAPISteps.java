@@ -7,22 +7,22 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-public class ForwardTreasuryApiSteps {
+public class ForwardTreasuryAPISteps {
     private List<ForwardTreasuryRates> rates;
 
-    public ForwardTreasuryApiSteps deserialize(Response response) {
+    public ForwardTreasuryAPISteps deserialize(Response response) {
         rates = response.jsonPath()
                 .getList("rates[1].forwardRates", ForwardTreasuryRates.class);
         return this;
     }
 
-    public ForwardTreasuryApiSteps validateStructure() {
+    public ForwardTreasuryAPISteps validateStructure() {
         assertNotNull(rates);
         assertFalse(rates.isEmpty());
         return this;
     }
 
-    public ForwardTreasuryApiSteps validateCurrencyPair() {
+    public ForwardTreasuryAPISteps validateCurrencyPair() {
         rates.forEach(r -> {
             assertEquals(r.getIso1(), "USD");
             assertEquals(r.getIso2(), "GEL");
@@ -30,7 +30,7 @@ public class ForwardTreasuryApiSteps {
         return this;
     }
 
-    public ForwardTreasuryApiSteps validateNumericFields() {
+    public ForwardTreasuryAPISteps validateNumericFields() {
         rates.forEach(r -> {
             assertTrue(r.getBidForwardRate() > 0);
             assertTrue(r.getAskForwardRate() > 0);

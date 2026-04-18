@@ -1,17 +1,17 @@
 package APITests;
-import org.tbc.API.TreasuryApiClient;
+import org.tbc.API.TreasuryAPIClient;
 import org.testng.annotations.Test;
-import org.tbc.steps.api.ForwardTreasuryApiSteps;
+import org.tbc.steps.api.ForwardTreasuryAPISteps;
 
 import java.util.List;
 
 public class verifyForwardTreasuryData {
     @Test
     public void verifyTreasuryApi() {
-        TreasuryApiClient apiPage = new TreasuryApiClient()
+        TreasuryAPIClient apiPage = new TreasuryAPIClient()
                 .getTreasuryRates();
 
-        ForwardTreasuryApiSteps steps = new ForwardTreasuryApiSteps()
+        ForwardTreasuryAPISteps steps = new ForwardTreasuryAPISteps()
                 .deserialize(apiPage.getResponse())
                 .validateStructure()
                 .validateCurrencyPair()
