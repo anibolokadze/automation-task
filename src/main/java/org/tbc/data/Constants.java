@@ -3,6 +3,7 @@ package org.tbc.data;
 public class Constants {
     public static final String BASE_URL = "https://apigw.tbcbank.ge";
     public static final String PATH_MONEY_TRANSFERS = "/api/v1/moneyTransfer/systems?locale=ka-GE";
+    public static final String PATH_TREASURY_PRODUCTS = "/api/v1/forwardRates/getForwardRates?locale=ka-GE";
     public static final String HOME_URL = "https://tbcbank.ge/ka";
     public static final String CONSUMER_LOAN_URL = "https://tbcbank.ge/ka/loans/consumer-loan/digital";
     public static final String MONEY_TRANSFERS_URL = "https://tbcbank.ge/en/other-products/money-transfers";

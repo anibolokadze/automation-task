@@ -5,12 +5,11 @@ import org.tbc.data.Constants;
 import org.tbc.steps.api.MoneyTransferSystemsApiSteps;
 import org.tbc.steps.web.MoneyTransferSteps;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class verifyMoneyTransferSystemsNamesAndCurrencies extends BaseTest {
+public class verifyMoneyTransferSystemsData extends BaseTest {
     MoneyTransferSteps moneyTransferSteps;
     MoneyTransferSystemsApiSteps moneyTransfersSystemsNamesSteps;
 
