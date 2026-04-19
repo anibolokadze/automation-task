@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class verifyForwardTreasuryData extends BaseTest {
-
     ForwardTreasurySteps forwardTreasurySteps;
 
     @BeforeClass
@@ -21,8 +20,7 @@ public class verifyForwardTreasuryData extends BaseTest {
 
     @Test
     public void verifyTreasuryApi() {
-
-        // 🔵 API
+        // API
         TreasuryAPIClient apiPage = new TreasuryAPIClient()
                 .getTreasuryRates();
 
@@ -36,7 +34,7 @@ public class verifyForwardTreasuryData extends BaseTest {
         List<Double> bids = steps.getBidRates();
         List<Double> asks = steps.getAskRates();
 
-        // 🔵 UI
+        // UI
         forwardTreasurySteps
                 .navigate(Constants.TREASURY_PRODUCTS_URL)
                 .assertTableData(periods, bids, asks);

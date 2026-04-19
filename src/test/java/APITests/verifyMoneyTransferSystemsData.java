@@ -35,7 +35,6 @@ public class verifyMoneyTransferSystemsData extends BaseTest {
         List<String> apiNames = steps.getTransferSystemsNames();
         List<String> apiCurrencies = steps.getTransferSystemsCurrencies();
 
-
         moneyTransferSteps
                 .navigate(Constants.PATH_MONEY_TRANSFERS)
                 .getSystemsTabs()
