@@ -1,4 +1,4 @@
-package org.tbc.steps;
+package org.tbc.steps.web;
 
 import com.microsoft.playwright.Page;
 import org.tbc.pages.OfferDetailsPage;

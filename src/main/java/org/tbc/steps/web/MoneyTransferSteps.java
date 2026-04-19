@@ -1,18 +1,28 @@
-package org.tbc.steps;
+package org.tbc.steps.web;
 
 import com.microsoft.playwright.Page;
 import org.tbc.data.Constants;
 import org.tbc.pages.MoneyTransferPage;
+import org.testng.Assert;
+
+import java.util.List;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class MoneyTransferSteps extends MoneyTransferPage {
     private final Page page;
+    private List<String> UINames;
+    private List<String> UICurrencies;
 
     public MoneyTransferSteps(Page page){
         super(page);
         this.page = page;
     }
+    public MoneyTransferSteps navigate(String moneyTransfersURL){
+        page.navigate(Constants.MONEY_TRANSFERS_URL);
+        return this;
+    }
+
     public MoneyTransferSteps verifyLoad(){
         page.waitForURL(Constants.MONEY_TRANSFERS_URL);
         return this;
@@ -42,6 +52,22 @@ public class MoneyTransferSteps extends MoneyTransferPage {
     }
     public MoneyTransferSteps verifyCalculationResultValue(){
         assertThat(calculationResultValue).isVisible();
+        return this;
+    }
+
+    public MoneyTransferSteps getSystemsTabs(){
+        transferSystemsNamesItems.first().waitFor();
+        UINames = transferSystemsNamesItems.allInnerTexts();
+        UICurrencies = transferSystemsCurrenciesItems.allInnerTexts();
+        return this;
+    }
+
+    public MoneyTransferSteps assertMenuNamesMatch(List<String> APINames){
+        Assert.assertEquals(UINames, APINames);
+        return this;
+    }
+    public MoneyTransferSteps assertCurrenciesMatch(List<String> APINames){
+        Assert.assertEquals(UICurrencies, APINames);
         return this;
     }
 }

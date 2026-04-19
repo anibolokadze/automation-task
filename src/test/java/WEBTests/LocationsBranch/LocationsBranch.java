@@ -1,7 +1,7 @@
-package LocationsBranch;
+package WEBTests.LocationsBranch;
 
 import BaseTests.MobileBaseTest;
-import org.tbc.steps.LocationsBranchSteps;
+import org.tbc.steps.web.LocationsBranchSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

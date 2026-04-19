@@ -1,7 +1,7 @@
-package LoanCalculator;
+package WEBTests.LoanCalculator;
 
 import BaseTests.BaseTest;
-import org.tbc.steps.ConsumerLoanPageSteps;
+import org.tbc.steps.web.ConsumerLoanPageSteps;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
